@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form">
+        <div class="col-md-10 mx-auto col-lg-5">
+        <h1 class="display-4 fw-bold lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Авторизація</font></font></h1>
+        </div>
+        <form action="" method="POST" novalidate>
+        <div class="col-md-10 mx-auto col-lg-5">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red">[{{ error }}] </span>
+            {% endfor %}
+        </p>
+        {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red">[{{ error }}] </span>
+            {% endfor %}
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+        <hr class="my-4">
+          <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нажавши Авторизуватися, Ви погоджуєтесь з умовами користування.</font></font></small>
+        </div>
+        </div>
+    </form>
+    </div>
+
+<div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Авторизація</font></font></h1>
+        <p class="col-lg-10 fs-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Всі данні зберігаються на сервері, тому може знадобитися час для їх пошуку.</font><font style="vertical-align: inherit;">Каждая обязательная группа форм имеет состояние проверки, которое может быть вызвано попыткой отправить форму без ее заполнения.</font></font></p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="имя@пример.com">
+            <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Адреса електронної пошти</font></font></label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+            <label for="floatingPassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Пароль</font></font></label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Запам'ятайте мене
+            </font></font></label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Авторзуватися</font></font><a href="/other" class="nav-link"></button>
+          <hr class="my-4">
+          <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Нажавши Авторизуватися, Ви погоджуєтесь з умовами користування.</font></font></small>
+        </form>
+      </div>
+    </div>
+{% endblock %}
+

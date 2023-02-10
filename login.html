@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="conteiner">
+    <div class="form">
+        <div class="col-md-10 mx-auto col-lg-5">
+        <h1 class="display-10 fw-bold lh-1 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Авторизація</font></font></h1>
+        </div>
+        <form action="" method="POST" novalidate>
+        <div class="col-md-10 mx-auto col-lg-5">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red">[{{ error }}] </span>
+            {% endfor %}
+        </p>
+        {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red">[{{ error }}] </span>
+            {% endfor %}
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+        </div>
+        </div>
+    </form>
+    </div>
+</div>
+{% endblock %}
+
