@@ -8,3 +8,4 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo
 
 #Flask, Flask-wtf
+#pip install flask
