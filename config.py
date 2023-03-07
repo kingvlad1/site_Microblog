@@ -1,5 +1,7 @@
 import os
+from flask import site
 
+#con
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
