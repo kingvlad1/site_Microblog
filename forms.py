@@ -17,3 +17,8 @@ class RegistrationForm(FlaskForm):
     password = PasswordField("Repeat Password", validators=[DataRequired(), EqualTo("password")])
     remember_me = BooleanField("Remember me")
     submit = SubmitField("Register")
+
+class Feedback(FlaskForm):
+    name = StringField("Вкажіть ваше справжнє ім'я", validators=[DataRequired()])
+    email = StringField("Ваш Email", validators=[DataRequired()])
+    submit = SubmitField("Відправити запит")
