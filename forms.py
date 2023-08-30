@@ -21,4 +21,5 @@ class RegistrationForm(FlaskForm):
 class Feedback(FlaskForm):
     name = StringField("Вкажіть ваше справжнє ім'я", validators=[DataRequired()])
     email = StringField("Ваш Email", validators=[DataRequired()])
+    embed = StringField("Опис вашого запиту", validators=[DataRequired()])
     submit = SubmitField("Відправити запит")
